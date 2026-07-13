@@ -15,13 +15,13 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-
+2996 - สลับตัวอักษร
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+541538
 ```
 
 สถานะ OJ:
@@ -33,7 +33,7 @@ Pass
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+0-15 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,10 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
-
+รับข้อความตัวอักษรภาษาอังกฤษยาว 5 ตัวอักษร แล้วให้สลับตัวอักษรกลับด้านและเป็นตัวพิมพ์เล็กทั้งหมด
+input: รับข้อความ
+output: สลับตัวอักษรกลับด้านและเป็นตัวพิมพ์เล็กทั้งหมด
+Constraints: โจทย์บอกให้ output เป็นตัวพิมพ์เล็กและกลับด้านเลยใช้ [::-1] ในการกลับด้านแล้วใช้ .lower()ในการเปลี่ยนเป็นตัวพิมพ์เล็ก
 ```
 
 ---
@@ -93,9 +96,9 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: รับค่าตัวอักษร
+Step 2: ใส่ [::-1].lower() เพื่อกลับด้านและเปลี่ยนเป็นตัวพิมพ์เล็ก
+Step 3: พิมพ์ข้อความออกมา
 ```
 
 ---
@@ -115,7 +118,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+เหมือนกัน เพราะกดส่งครั้งแรกแล้วผ่านเลย
 ```
 
 ---
@@ -135,31 +138,31 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+ตัวพิมพ์ใหญ่หมดเพื่อตรวจสอบว่า output จะออกมาเป็นตัวพิมพ์เล็กไหม
 ```
 
 Input:
 
 ```text
-
+HELLO
 ```
 
 Expected output:
 
 ```text
-
+olleh
 ```
 
 Actual output:
 
 ```text
-
+olleh
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +170,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็ดว่าอักษรพิเศษจะทำให้ error ไหม
 ```
 
 Input:
 
 ```text
-
+H@llo
 ```
 
 Expected output:
 
 ```text
-
+oll@h
 ```
 
 Actual output:
 
 ```text
-
+oll@h
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +202,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็ดว่าตัวเลขจะทำให้ error ไหม
 ```
 
 Input:
 
 ```text
-
+7ll5o
 ```
 
 Expected output:
 
 ```text
-
+o5ll7
 ```
 
 Actual output:
 
 ```text
-
+o5ll7
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +236,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +254,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -288,7 +291,7 @@ Yes / No
 คุณยังทำอะไรด้วยตนเอง
 
 ```text
-
+เขียน code เอง รันโปรแกรมใน VS Code เอง 
 ```
 
 คุณคัดลอก code จากคนอื่นหรือไม่
@@ -305,10 +308,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. |Yes |
+| I understand my final code. |Yes |
+| I recorded the real OJ status. |Yes |
+| I did not copy AI-generated text directly into this file. |Yes |
+| I did not copy code from another person. |Yes |
+| If I received human help, I disclosed it in this file. |Yes |
+| I submitted the final code to the OJ by myself. |Yes |
