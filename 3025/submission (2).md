@@ -15,25 +15,25 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-55555
+OJ3025 - Season
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+547918
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+15-30 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,15 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
+โจทย์ให้รับค่าจำนวนเต็ม 2 ค่า ค่าแรกเป็นเดือน ค่าสองเป็นวัน แล้วให้ตัดสินว่าเป็นฤดูอะไร
+Input:
+โปรแกรมรับจำนวนเต็ม 2 ค่า
 
+Output:
+โปรแกรมพิมพ์ชื่อฤดู  (spring, summer, fall, winter)
+
+Constraints:
+ฤดูจะเปลี่ยนตั้งแต่วันที่ 21 ของเดือนที่ 3 หารลงตัว 
 ```
 
 ---
@@ -93,9 +101,11 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: อ่านจำนวนเต็ม 2 บรรทัด(เดือน, วัน)
+Step 2: ตรวจว่าเดือนหาร 3 ลงตัวไหม 
+Step 3: ตรวจว่าวันมากกว่าหรือเท่ากับ 21 ถ้าใช้ให้ เดือน += 1 
+Step 4:นำค่าเดือนไปเช็ดเงื่อนไขว่าตรงกับฤดูอะไร 
+Step 5: พิมพ์ฤดู
 ```
 
 ---
@@ -115,7 +125,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+วิธีสุดท้ายเหมือนกับแผนแรก ตรวจก่อนว่าเดือนหาร 3 ลงตัวและวันที่ >= 21 ไหม แล้วค่อยเอาค่าเดือนที่ได้ไปเข้าเงื่อนไขเช็ดว่าตรงกับฤดูอะไร
 ```
 
 ---
@@ -135,31 +145,32 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+เพราะเดือนหาร 3 ลงตัวและวันมากกว่า 21
 ```
 
 Input:
 
 ```text
-
+6
+22
 ```
 
 Expected output:
 
 ```text
-
+summer
 ```
 
 Actual output:
 
 ```text
-
+summer
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +178,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพราะเดือนหาร 3 ลงตัวและวันน้อยกว่า 21
 ```
 
 Input:
 
 ```text
-
+6
+17
 ```
 
 Expected output:
 
 ```text
-
+spring
 ```
 
 Actual output:
 
 ```text
-
+spring
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +211,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพราะเดือนหาร 3 ไม่ลงตัวและวันมากกว่า 21
 ```
 
 Input:
 
 ```text
-
+11
+30
 ```
 
 Expected output:
 
 ```text
-
+fall
 ```
 
 Actual output:
 
 ```text
-
+fall
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +246,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +264,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +318,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |

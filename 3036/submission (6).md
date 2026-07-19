@@ -15,25 +15,25 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-55555
+OJ3036 - ปราสาท
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+558722
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+1-3 hours
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,15 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
+โจทย์ให้รูปพีระมิดมา โดยให้คำนวนหาเส้นทางที่สั้นที่สุดในการไปห้องบนสุด
+Input:
+รับจำนวนเต็มหนึ่งค่า n
 
+Output:
+พิมพ์เส้นทางที่สั้นที่สุด
+
+Constraints:
+โจทย์ไม่ได้บอกว่าพีระมิดมีกี่ชั้น เพราะงั้นควรคิดสมการคำนวนชั้นพีระมิดไว้ด้วย
 ```
 
 ---
@@ -93,9 +101,14 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: รับค่าจำนวนเต็ม n
+Step 2: เช็ดเงื่อนไขถ้า n == 1 ให้พิมพ์ 0
+Step 3: ถ้าไม่จริง ให้เข้า loop หาแถวที่ n อยู่ while r * r < n: r += 1
+Step 4: พอรู้แถวหาห้องแรกของแถว START = (r - 1) * (r - 1) + 1
+Step 5: หาต่ำแหน่งของ n pos = n - START
+Step 6: เช็ดว่าต่ำแหน่งเป็นคู่หรือคี่
+Step 7: ถ้าคู่เข้าสูตร 2 * (r - 1) แล้วพิมพ์ค่าที่ได้ออกมา
+Step 8: ถ้าคี่เข้าสูตร 2 * (r - 1) - 1 แล้วพิมพ์ค่าที่ได้ออกมา
 ```
 
 ---
@@ -115,7 +128,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+วิธีสุดท้ายเหมือนกับแผนแรก คือคำนวนหาชั้นของ n หาห้องแรก หาต่ำแหน่งของ n เช็ดว่า n เป็นคู่หรือคี่แล้วไปเข้าสูตรพิมพ์ค่าที่ได้ออกมา
 ```
 
 ---
@@ -135,31 +148,31 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+ถ้าอยู่ 1 ตั้งแต่แรกทางที่สั้นที่สุดต้องเป็น 0
 ```
 
 Input:
 
 ```text
-
+1
 ```
 
 Expected output:
 
 ```text
-
+0
 ```
 
 Actual output:
 
 ```text
-
+0
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +180,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+ค่ามากสุดที่โจทย์กำหนด
 ```
 
 Input:
 
 ```text
-
+100000
 ```
 
 Expected output:
 
 ```text
-
+631
 ```
 
 Actual output:
 
 ```text
-
+631
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +212,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็ดว่าโปรแกรมทำงานถูกต้องหรือไม่
 ```
 
 Input:
 
 ```text
-
+13
 ```
 
 Expected output:
 
 ```text
-
+5
 ```
 
 Actual output:
 
 ```text
-
+5
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +246,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +264,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +318,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |

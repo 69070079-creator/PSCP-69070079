@@ -15,13 +15,13 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-3001 - Colors
+OJ3022 - Temperature
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-541516
+548438
 ```
 
 สถานะ OJ:
@@ -70,10 +70,20 @@ More than 4 weeks
 
 ให้อธิบาย input, output และ constraints สำคัญด้วย
 
-ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้  แต่ต้องพยายามอธิบายอย่างจริงใจ
+ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
-ัรับค่าแม่สี 2 ค่า เพื่อนำมาผสมออกมาเป็นสีใหม่ หากมีสีที่ไม่อยู่ในแม่สีจะพิมพ์ Error
+โจทย์ให้รับค่าอุณหภูมิจากหน่วยหนึ่งเปลี่ยนไปเป็นอีกหน่วยหนึ่ง
+Input:
+รับจำนวนทศนิยมหนึ่งค่า(อุณหภูมิ)
+รับค่าหน่วยอุณหภูมิ
+รับค่าหน่วยที่ต้องการเปลี่ยน
+
+Output:
+พิมพ์ค่าอุณหภูมิหลักจากแปลงหน่วยแล้ว
+
+Constraints:
+โจทย์ให้สูตรแปลงแต่ละหน่วยจากเซลเซียส (C) เพราะงั้นควรแปลงค่าอุณหภูมิที่รับมาเป็นหน่วยเซลเซียส (C) ก่อน
 ```
 
 ---
@@ -93,9 +103,10 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: อ่านจำนวนทศนิยม temp, หน่วยของ temp, หน่วยที่ต้องการ
+Step 2: แปลงอุณหภูมิที่รับมาเป็นหน่วย เซลเซียส (C)
+Step 3: นำค่าที่ได้มาแปลงเป็นหน่วยที่ต้องการ
+Step 4: พิมพ์ค่าอุณหภูมิที่ได้
 ```
 
 ---
@@ -115,7 +126,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+วิธีสุดท้ายเหมือนกับแผนแรก แปลงค่าอุณหภูมิที่รับมาเป็นเซลเซียส (C) แล้วค่อยแปลงกลับเป็นค่าที่ต้องการ
 ```
 
 ---
@@ -135,31 +146,33 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+เพราะหน่วยแรกกับหน่วยที่ต้องการเป็นหน่วยเดียวกัน
 ```
 
 Input:
 
 ```text
-
+212.0
+F
+F
 ```
 
 Expected output:
 
 ```text
-
+212.00
 ```
 
 Actual output:
 
 ```text
-
+212.00
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +180,33 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพราะจะเช็ดว่าการแปลงหน่วยเป็นเซลเซียส (C)ก่อน แล้วค่อยแปลงเป็นหน่วยที่ต้องการจะได้ผลลัพย์ที่คาดไว้ไหม
 ```
 
 Input:
 
 ```text
-
+40.0
+F
+K
 ```
 
 Expected output:
 
 ```text
-
+277.59
 ```
 
 Actual output:
 
 ```text
-
+277.59
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +214,33 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพราะถ้าค่าแรกเป็นเซลเซียส (C) อยู่แล้ว ค่าที่แปลงออกมาจะได้ผลลัพย์ที่คาดไว้ไหม
 ```
 
 Input:
 
 ```text
-
+40
+C
+R
 ```
 
 Expected output:
 
 ```text
-
+563.67
 ```
 
 Actual output:
 
 ```text
-
+563.67
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +250,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +268,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +322,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |

@@ -15,25 +15,25 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-3025
+OJ3042 - หาร 10
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-55555
+559468
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+0-15 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,15 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
+ให้คำนวนหาค่าที่หาร 10 ลงตัว
+Input:
+รับจำนวนเต็มหนึ่งค่า n
 
+Output:
+พิมพ์ค่าที่หาร 10 ลงตัว
+
+Constraints:
+ต้องคั่นข้อมูลแต่ละตัวด้วยช่องว่าง
 ```
 
 ---
@@ -93,9 +101,11 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: รับจำนวนเต็ม n
+Step 2: หาตัวแรกที่หาร 10 ลงตัวด้วย (n // 10) * 10
+Step 3: เข้าวนลูปเริ่มจากตัวแรกที่หาร 10 ลงตัวไปจนถึง 0 โดยลดลงทีละ 10
+Step 4: พิมพ์ ค่าที่หาร 10 ลงตัว คั่นด้วยคำสั่ง end = " "
+
 ```
 
 ---
@@ -115,7 +125,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+วิธีสุดท้ายเหมือนกับแผนแรก คำนวนหาตัวแรกที่หาร 10 ลงตัว ไปเข้าลูปลดลงที่ละ 10 ไปจนถึง 0 แล้วพิมพ์ค่าที่หาร 10 ลงตัว
 ```
 
 ---
@@ -135,31 +145,31 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+เป็นเลขที่หาร 10 ไม่ลงตัว
 ```
 
 Input:
 
 ```text
-
+99
 ```
 
 Expected output:
 
 ```text
-
+90 80 70 60 50 40 30 20 10 0 
 ```
 
 Actual output:
 
 ```text
-
+90 80 70 60 50 40 30 20 10 0 
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +177,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+ถ้าเริ่มด้วย 0 ค่าที่หารได้ต้องเป็น 0
 ```
 
 Input:
 
 ```text
-
+0
 ```
 
 Expected output:
 
 ```text
-
+0
 ```
 
 Actual output:
 
 ```text
-
+0
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +209,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็ดว่าทำงานได้ถูกต้องไหม
 ```
 
 Input:
 
 ```text
-
+30
 ```
 
 Expected output:
 
 ```text
-
+30 20 10 0
 ```
 
 Actual output:
 
 ```text
-
+30 20 10 0
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +243,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +261,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +315,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |
